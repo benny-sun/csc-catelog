@@ -42,12 +42,21 @@
     <link rel="stylesheet" href="styles/animate.min.css" type="text/css">
     <link rel="stylesheet" href="styles/main.css" type="text/css">
 
-    <title>Smarty</title>
+    <title>CSC-Catelog</title>
 
     <script type="text/javascript" src="js/modernizr.min.js"></script>
     <script type="text/javascript" src="pace/pace.min.js"></script>
 
     <style>
+        @font-face {
+            font-family: "Euphemia";
+            src: url("font/Euphemia UCAS Bold 2.6.6.ttf") format("opentype"),
+                url("font/Euphemia UCAS Italic 2.6.6.ttf") format("opentype"),
+                url("font/Euphemia UCAS Regular 2.6.6.ttf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
         @media screen and (min-width: 1750px) {
             .container {
                 width: initial;
@@ -55,9 +64,8 @@
         }
         .content {
             color: black;
-            width: inherit;
-            padding-left:12%;
-            padding-bottom: 60px;
+            max-width: 70%;
+            word-break: break-all;
         }
         section {
             padding-bottom: 6px;
@@ -72,7 +80,52 @@
         .row > div {
             padding: 0;
         }
+        .field {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        hr {
+            background-color: dimgrey;
+            color: dimgrey;
+            border: solid 1px dimgrey;
+            height: 2px;
+        }
+        .content > p {
+            text-align: justify;    /* 左右對齊 */
+            font-family: Microsoft JhengHei;    /* 微軟正黑體 */
+            font-weight: bold;
+            font-size: 16pt;
+        }
+        .content > h1 {
+            font-family: Euphemia; font-size: 40pt;
+        }
+        h1 > small {
+            font-size: 24pt; padding-left: 10pt;
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                margin: 0;
+            }
+            h1 > small {
+                font-size: 16pt;
+                padding-left: 6pt;
+            }
+            .content > h1 {
+                font-size: 30pt;
+            }
+            .content > p {
+                font-size: 14pt;
+            }
+            .field {
+                /*min-height: 60vh;*/
+            }
+        }
+
     </style>
+
 </head>
 
 <body>
@@ -129,7 +182,7 @@
     </div><!-- .loader-container -->
     <div class="loader-footer">
         <p>
-            Copyright &copy; 2014 <span class="text-white">Smarty</span>.<br>All
+            Copyright &copy; 2017 <span class="text-white">CSC</span>.<br>All
             Rights Reserved.
         </p>
     </div>
@@ -144,10 +197,8 @@
                 </div>
                 <nav class="main-navigation">
                     <ul id="one-page-nav">
-                        <li class="active"><a href="#sectionX">Class 1</a></li>
-                        <li><a href="#sectionY">Class 2</a></li>
-                        <li><a href="#sectionZ">Class 3</a></li>
-                        <li><a href="#section-intro">intro</a></li>
+                        <li class="active"><a href="#sectionX">WallE</a></li>
+                        <li><a href="#sectionY">Glatt</a></li>
                         <li><a href="#section-contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -168,7 +219,7 @@
                         <a href="#"><i class="fa fa-instagram"></i></a>
                     </div>
                     <div class="margin-10"></div>
-                    <p>Copyright &copy; 2014 <span class="text-white">Smarty</span>. All Rights Reserved.</p>
+                    <p>Copyright &copy; 2017 <span class="text-white">CSC</span>. All Rights Reserved.</p>
                 </div>
             </div><!-- .menu-inner -->
         </div><!-- .menu-container -->
@@ -179,17 +230,16 @@
 
     <section id="sectionX">
         <div class="container bg-white">
-            <div class="row" style="">
-                <div class="col-lg-6 col-xs-12">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-6">
                     <img src="images/csc/P16-版型1-圖1.jpg">
                 </div>
-                <div class="col-lg-6 col-xs-12">
+                <div class="col-lg-6 col-lg-pull-6 field">
                     <div class="content">
-                        <h1>test</h1>
-                        <p >contentcontencontentc</p>
-                        <p>contentconttcontentcontent</p>
-                        <p>contentcontentntcontentcontent</p>
-                        <p>contentcontententcontent</p>
+                        <h1>WallE<small>SD.2301SS</small></h1>
+                        <hr>
+                        <p>相對於其他的拉門設計，此款單輪軸、單桿設計的淋浴拉門將是最易於施工，並且價格最為合宜的品項。</p>
+                        <p>建議在寸土寸金大都會區的小坪數套房設計規劃上使用，將會是設計感與預算最為平衡的選擇。</p>
                     </div>
                 </div>
             </div>
@@ -199,75 +249,38 @@
     <section id="sectionY">
         <div class="container bg-white">
             <div class="row">
-                <div class="col-lg-6 col-xs-12">
+                <div class="col-lg-6 col-lg-push-6">
                     <img src="images/csc/P04-版型1-圖3.jpg">
                 </div>
-                <div class="col-lg-6 col-xs-12">
-                    <div class="content" style="">
-                        <h1>test</h1>
-                        <p >contentcontencontentc</p>
-                        <p>contentconttcontentcontent</p>
-                        <p>contentcontentntcontentcontent</p>
-                        <p>contentcontententcontent</p>
+                <div class="col-lg-6 col-lg-pull-6 field">
+                    <div class="content">
+                        <h1>Glatt<small>GL.1402</small></h1>
+                        <hr>
+                        <p>表面處理使用了一貫的手工拉絲的 Glatt ，也賦予了非常簡便的清潔保養特性，不費力地讓您的浴室五金光潔如新。Glatt的垂直款式也同時提供玻對玻鉸鏈。</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section><!-- #section-intro -->
-
-    <section id="sectionZ">
-        <div class="container bg-white">
-            <div class="row">
-                <div class="col-lg-6 col-xs-12">
-                    <img src="images/csc/P16-版型1-圖1.jpg">
-                </div>
-                <div class="col-lg-6 col-xs-12">
-                    <div class="content" style="">
-                        <h1>test</h1>
-                        <p >contentcontencontentc</p>
-                        <p>contentconttcontentcontent</p>
-                        <p>contentcontentntcontentcontent</p>
-                        <p>contentcontententcontent</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section><!-- #section-intro -->
-
-    <section id="section-intro">
-        <div class="section-content bg-pattern dark-screen">
-            <div class="container">
-                <h1 class="heading-enormous no-margin">Smarty</h1>
-                <h2 class="heading-huge no-margin">Wordpress Portfolio</h2>
-                <h3 class="heading-big no-margin">and Photographer Theme</h3>
-                <p class="text-bigger">
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate<br>
-                    velit esse molestie consequat.
-                </p>
-                <div class="margin-30"></div>
-                <a href="#" class="button-big">Get Started Now</a>
-            </div><!-- .container -->
-        </div><!-- .section-content -->
     </section><!-- #section-intro -->
 
     <section id="section-contact">
         <div class="section-content bg-pattern dark-screen">
             <div class="container">
-                <h1 class="onscroll-animate" data-animation="fadeInRight">Contact Us</h1>
+                <h1 class="onscroll-animate" data-animation="fadeInRight" style="font-family: Microsoft JhengHei;">聯絡我們</h1>
                 <div class="margin-10"></div>
                 <div class="row">
                     <div class="col-md-3 onscroll-animate content-column" data-animation="fadeInUp">
                         <address>
-                            <p>123A, Molestie Lorem Avenue, Aliquam AAA0010</p>
-                            <p>Tel: (+20) 21 301 524</p>
-                            <p><a href="#">info@smarty.com</a></p>
+                            <p style="font-family: Microsoft JhengHei;">地址</p>
+                            <p>Tel: (03)4123456</p>
+                            <p><a href="#">support@csc.com</a></p>
                             <p><a href="#" class="popup-window-trigger" data-popup="#popup-map">Location on Google
                                 Maps</a></p>
                         </address>
                     </div>
                     <div class="col-md-9 content-column">
                         <form id="form-contact"
-                              action="http://event-theme.com/themes/smarty-html/template/php/send_email.php"
+                              action=""
                               method="post" data-email-not-set-msg="Email is required"
                               data-message-not-set-msg="Message is required"
                               data-ajax-fail-msg="Request could not be sent, try later"
@@ -293,8 +306,7 @@
                             <p class="return-msg"></p>
                             <div class="clearfix onscroll-animate" data-delay="500">
                                 <input class="pull-right" type="submit" value="Submit">
-                                <p class="note pull-left">* Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-                                    sed diam.</p>
+                                <p class="note pull-left">*</p>
                             </div>
                         </form>
                     </div>
