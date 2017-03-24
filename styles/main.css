@@ -5627,7 +5627,7 @@ textarea {
     padding: 60px;
   }
 }
-@media (max-width: 1199px) {
+@media (max-width: 2000px) { /* 從1199px調到2000px 為了縮小pc版的menu */
   body.right-menu #menu {
     right: -225px;
   }
