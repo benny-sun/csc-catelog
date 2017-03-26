@@ -959,7 +959,7 @@ textarea {
   background-repeat: no-repeat;
 }
 #section-contact {
-  background-image: url('../images/backgrounds/contact.jpg');
+  background-image: url('../images/csc/封底-版型2-圖1.jpg');
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -5136,7 +5136,7 @@ textarea {
   padding: 0 30px;
 }
 .single-page {
-  background-image: url('../images/backgrounds/single_page.jpg');
+  background-image: url('../images/csc/封底-版型2-圖1.jpg');
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -5627,7 +5627,7 @@ textarea {
     padding: 60px;
   }
 }
-@media (max-width: 2000px) { /* 從1199px調到2000px 為了縮小pc版的menu */
+@media (max-width: 3000px) { /* 從1199px調到3000px 為了縮小pc版的menu */
   body.right-menu #menu {
     right: -225px;
   }

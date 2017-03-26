@@ -56,16 +56,23 @@
             font-weight: normal;
             font-style: normal;
         }
+        @font-face {
+            font-family: "Eras Bold ITC";
+            src: url("font/eras-bold-itc.TTF") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "AR Bonnie";
+            src: url("font/ARBONNIE.ttf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
 
         @media screen and (min-width: 1750px) {
             .container {
                 width: initial;
             }
-        }
-        .content {
-            color: black;
-            max-width: 70%;
-            word-break: break-all;
         }
         section {
             padding-bottom: 6px;
@@ -80,8 +87,8 @@
         .row > div {
             padding: 0;
         }
-        .field {
-            min-height: 80vh;
+        .field, .field-cover {
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,6 +99,11 @@
             border: solid 1px dimgrey;
             height: 2px;
         }
+        .content {
+            color: black;
+            max-width: 70%;
+            word-break: break-all;
+        }
         .content > p {
             text-align: justify;    /* 左右對齊 */
             font-family: Microsoft JhengHei;    /* 微軟正黑體 */
@@ -101,17 +113,27 @@
         .content > h1 {
             font-family: Euphemia; font-size: 40pt;
         }
+        .content > img {
+            width: 100%;
+            height: auto;
+            max-height: 60vh;
+            padding-top: 10vh;
+        }
         h1 > small {
             font-size: 24pt; padding-left: 10pt;
         }
 
-        @media screen and (max-width: 480px) {
-            h1 {
-                margin: 0;
+
+        @media screen and (max-width: 768px) {
+            .field {
+                min-height: 50vh;
             }
             h1 > small {
                 font-size: 16pt;
                 padding-left: 6pt;
+            }
+            .content {
+                padding-bottom: 6vh;
             }
             .content > h1 {
                 font-size: 30pt;
@@ -119,8 +141,41 @@
             .content > p {
                 font-size: 14pt;
             }
+            .content > img {
+                padding-top: 0;
+            }
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
             .field {
-                /*min-height: 60vh;*/
+                min-height: 50vh;
+            }
+            .content > img {
+                padding-top: 0;
+            }
+        }
+        @media screen and (min-width: 1024px) and (max-width: 1366px) {
+            .field, .field-cover {
+                min-height: 35vh;
+            }
+            .content > h1 {
+                font-size: 30pt;
+            }
+            .content > img {
+                padding-top: 0;
+            }
+            h1 > small {
+                font-size: 16pt;
+            }
+            .content > p {
+                font-size: 12pt;
+            }
+            #all > section {
+                height: auto;
+            }
+        }
+        @media screen and (min-width: 1200px) and (max-width: 3000px) {
+            .container {
+                width: 100%;
             }
         }
 
@@ -197,18 +252,20 @@
                 </div>
                 <nav class="main-navigation">
                     <ul id="one-page-nav">
-                        <li class="active"><a href="#sectionX">WallE</a></li>
-                        <li><a href="#sectionY">Glatt</a></li>
+                        <li class="active"><a href="#sectionA">封面</a></li>
+                        <li><a href="#sectionA">版型2</a></li>
+                        <li><a href="#sectionX">WallE (版型1)</a></li>
+                        <li><a href="#sectionY">Glatt (版型1)</a></li>
                         <li><a href="#section-contact">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="menu-content">
-                    <form id="form-search">
-                        <input type="text" placeholder="Search...">
-                        <div class="submit-container">
-                            <input type="submit" value="Send">
-                        </div>
-                    </form>
+                    <!--<form id="form-search">-->
+                        <!--<input type="text" placeholder="Search...">-->
+                        <!--<div class="submit-container">-->
+                            <!--<input type="submit" value="Send">-->
+                        <!--</div>-->
+                    <!--</form>-->
                 </div>
                 <div class="menu-bottom">
                     <div class="text-center">
@@ -228,13 +285,48 @@
         <i class="fa fa-reorder"></i>
     </div>
 
+    <section id="sectionCover">
+        <div class="container bg-white">
+            <div class="row" style="background-color: #1b1b1b;">
+                <div class="col-lg-6 col-md-6 field-cover">
+                    <div class="content">
+                        <h1 style="font-family: 'AR Bonnie'; color: #9d9d9d; font-weight: bold;">P r o d u c t　P o r t f o l i o</h1>
+                        <h2 style="font-family: 'Eras Bold ITC'; color: rgb(50, 130, 190); font-size: x-large;">inspiring lifestyle<div style="font-family: 'Arial'; font-weight: bold; color: white; font-size: x-large;">2017</div></h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 hidden-xs hidden-sm">
+                    <img src="images/csc/封面-版型1-圖1.jpg">
+                </div>
+
+            </div>
+        </div>
+    </section><!-- #section-intro -->
+
+    <section id="sectionA">
+        <div class="container bg-white">
+            <div class="row">
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-md-push-6">
+                    <img src="images/csc/P06-版型1-圖1.jpg">
+                </div>
+                <div class="col-lg-6 col-lg-pull-6 col-md-6 col-md-pull-6 field">
+                    <div class="content">
+                        <h1>Glatt<small>GL.1402</small></h1>
+                        <hr>
+                        <p>表面處理使用了一貫的手工拉絲的 Glatt ，也賦予了非常簡便的清潔保養特性，不費力地讓您的浴室五金光潔如新。Glatt的垂直款式也同時提供玻對玻鉸鏈。</p>
+                        <img src="images/csc/P06-版型1-圖2.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- #section-intro -->
+
     <section id="sectionX">
         <div class="container bg-white">
             <div class="row">
-                <div class="col-lg-6 col-lg-push-6">
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-md-push-6">
                     <img src="images/csc/P16-版型1-圖1.jpg">
                 </div>
-                <div class="col-lg-6 col-lg-pull-6 field">
+                <div class="col-lg-6 col-lg-pull-6 col-md-6 col-md-pull-6 field">
                     <div class="content">
                         <h1>WallE<small>SD.2301SS</small></h1>
                         <hr>
@@ -249,10 +341,10 @@
     <section id="sectionY">
         <div class="container bg-white">
             <div class="row">
-                <div class="col-lg-6 col-lg-push-6">
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-md-push-6">
                     <img src="images/csc/P04-版型1-圖3.jpg">
                 </div>
-                <div class="col-lg-6 col-lg-pull-6 field">
+                <div class="col-lg-6 col-lg-pull-6 col-md-6 col-md-pull-6 field">
                     <div class="content">
                         <h1>Glatt<small>GL.1402</small></h1>
                         <hr>
@@ -264,7 +356,7 @@
     </section><!-- #section-intro -->
 
     <section id="section-contact">
-        <div class="section-content bg-pattern dark-screen">
+        <div class="section-content dark-screen">
             <div class="container">
                 <h1 class="onscroll-animate" data-animation="fadeInRight" style="font-family: Microsoft JhengHei;">聯絡我們</h1>
                 <div class="margin-10"></div>
@@ -305,7 +397,8 @@
                             </div>
                             <p class="return-msg"></p>
                             <div class="clearfix onscroll-animate" data-delay="500">
-                                <input class="pull-right" type="submit" value="Submit">
+                                <!--<input class="pull-right" type="submit" value="Submit">-->
+                                <a href="tel:034551512">立馬撥打</a>
                                 <p class="note pull-left">*</p>
                             </div>
                         </form>
