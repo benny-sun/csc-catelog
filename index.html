@@ -68,7 +68,7 @@
             font-weight: normal;
             font-style: normal;
         }
-
+        /* ========================= */
         @media screen and (min-width: 1750px) {
             .container {
                 width: initial;
@@ -84,7 +84,7 @@
         .row div img {
             min-width: 50%; max-width: 100%; height: auto; left: 0; bottom: 0;
         }
-        .row > div {
+        .row > .col-lg-6 {
             padding: 0;
         }
         .field, .field-cover {
@@ -121,6 +121,12 @@
         }
         h1 > small {
             font-size: 24pt; padding-left: 10pt;
+        }
+        .dark-screen {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        a {
+            text-decoration: none;
         }
 
 
@@ -252,7 +258,7 @@
                 </div>
                 <nav class="main-navigation">
                     <ul id="one-page-nav">
-                        <li class="active"><a href="#sectionA">封面</a></li>
+                        <li class="active"><a href="#sectionCover">封面</a></li>
                         <li><a href="#sectionA">版型2</a></li>
                         <li><a href="#sectionX">WallE (版型1)</a></li>
                         <li><a href="#sectionY">Glatt (版型1)</a></li>
@@ -356,53 +362,70 @@
     </section><!-- #section-intro -->
 
     <section id="section-contact">
-        <div class="section-content dark-screen">
-            <div class="container">
+        <div class="section-content">
+            <div class="container dark-screen">
                 <h1 class="onscroll-animate" data-animation="fadeInRight" style="font-family: Microsoft JhengHei;">聯絡我們</h1>
                 <div class="margin-10"></div>
                 <div class="row">
-                    <div class="col-md-3 onscroll-animate content-column" data-animation="fadeInUp">
-                        <address>
-                            <p style="font-family: Microsoft JhengHei;">地址</p>
-                            <p>Tel: (03)4123456</p>
-                            <p><a href="#">support@csc.com</a></p>
-                            <p><a href="#" class="popup-window-trigger" data-popup="#popup-map">Location on Google
-                                Maps</a></p>
-                        </address>
-                    </div>
-                    <div class="col-md-9 content-column">
-                        <form id="form-contact"
-                              action=""
-                              method="post" data-email-not-set-msg="Email is required"
-                              data-message-not-set-msg="Message is required"
-                              data-ajax-fail-msg="Request could not be sent, try later"
-                              data-success-msg="Email successfully sent.">
-                            <div class="row">
-                                <div class="col-md-5 onscroll-animate" data-animation="fadeInUp" data-delay="350">
-                                    <div class="input-container input-name">
-                                        <input type="text" name="name" placeholder="Full Name">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab">Email</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Call us</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <div class="col-md-3 onscroll-animate content-column tab-pane active" data-animation="fadeInUp">
+
+                                <address>
+                                    <p style="font-family: Microsoft JhengHei;">地址</p>
+                                    <p>Tel: (03)4123456</p>
+                                    <p><a href="#">support@csc.com</a></p>
+                                    <p><a href="#" class="popup-window-trigger" data-popup="#popup-map">Location on Google
+                                        Maps</a></p>
+                                </address>
+                            </div>
+                            <div class="col-md-9 content-column">
+                                <form id="form-contact"
+                                      action=""
+                                      method="post" data-email-not-set-msg="Email is required"
+                                      data-message-not-set-msg="Message is required"
+                                      data-ajax-fail-msg="Request could not be sent, try later"
+                                      data-success-msg="Email successfully sent.">
+                                    <div class="row">
+                                        <div class="col-md-5 onscroll-animate" data-animation="fadeInUp" data-delay="350">
+                                            <div class="input-container input-name">
+                                                <input type="text" name="name" placeholder="Full Name">
+                                            </div>
+                                            <div class="input-container input-email">
+                                                <input type="text" name="email" placeholder="Email Address">
+                                            </div>
+                                            <div class="input-container input-phone">
+                                                <input type="text" name="phone" placeholder="Phone Number">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-7 onscroll-animate" data-animation="fadeInUp" data-delay="500">
+                                            <div class="input-container input-message">
+                                                <textarea name="message" placeholder="Message"></textarea>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="input-container input-email">
-                                        <input type="text" name="email" placeholder="Email Address">
+                                    <p class="return-msg"></p>
+                                    <div class="clearfix onscroll-animate" data-delay="500">
+                                        <input class="pull-right" type="submit" value="Submit">
                                     </div>
-                                    <div class="input-container input-phone">
-                                        <input type="text" name="phone" placeholder="Phone Number">
-                                    </div>
-                                </div>
-                                <div class="col-md-7 onscroll-animate" data-animation="fadeInUp" data-delay="500">
-                                    <div class="input-container input-message">
-                                        <textarea name="message" placeholder="Message"></textarea>
-                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <div class="col-md-9 content-column">
+                                <div class="clearfix onscroll-animate" data-delay="200">
+                                    <!--<input class="pull-right" type="submit" value="Submit">-->
+                                    <a class="btn-lg btn-success glyphicon glyphicon-earphone" href="tel:034551512">立馬撥打</a>
                                 </div>
                             </div>
-                            <p class="return-msg"></p>
-                            <div class="clearfix onscroll-animate" data-delay="500">
-                                <!--<input class="pull-right" type="submit" value="Submit">-->
-                                <a href="tel:034551512">立馬撥打</a>
-                                <p class="note pull-left">*</p>
-                            </div>
-                        </form>
+                        </div>
                     </div>
+
+
                 </div><!-- .row -->
             </div><!-- .container -->
         </div><!-- .section-content -->

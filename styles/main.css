@@ -959,7 +959,7 @@ textarea {
   background-repeat: no-repeat;
 }
 #section-contact {
-  background-image: url('../images/csc/封底-版型2-圖1.jpg');
+  background-image: url('../images/csc/封底-版型2-圖1.jpg');   /* #封底 */
   background-position: center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
