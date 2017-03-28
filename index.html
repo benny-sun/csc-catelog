@@ -100,11 +100,16 @@
             background-color: dimgrey;
             color: dimgrey;
             border: solid 1px dimgrey;
-            height: 2px;
+            margin: 0;
+        }
+        .cover {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
         .content {
             color: black;
-            max-width: 70%;
+            max-width: 65%;
             word-break: break-all;
         }
         .content > p {
@@ -114,7 +119,7 @@
             font-size: 14pt;
         }
         .content > h1 {
-            font-family: Euphemia; font-size: 40pt;
+            font-family: Arial; font-size: 36pt;
         }
         .content > img {
             width: 100%;
@@ -123,7 +128,7 @@
             padding-top: 10vh;
         }
         h1 > small {
-            font-size: 24pt; padding-left: 10pt;
+            font-size: 20pt; padding-left: 10pt;
         }
         .dark-screen {
             background-color: rgba(0, 0, 0, 0.7);
@@ -139,15 +144,20 @@
             .field {
                 min-height: 50vh;
             }
-            h1 > small {
-                font-size: 16pt;
-                padding-left: 6pt;
-            }
             .content {
                 padding-bottom: 6vh;
             }
             .content > h1 {
-                font-size: 30pt;
+                font-size: 26pt;
+                margin-bottom: 0;
+            }
+            h1 > small {
+                font-size: 12pt;
+                padding-left: 6pt;
+            }
+            .content > p {
+                font-weight: 300;
+                font-size: 13pt;
             }
             .content > img {
                 padding-top: 0;
@@ -301,9 +311,14 @@
         <div class="container bg-white">
             <div class="row" style="background-color: #1b1b1b;">
                 <div class="col-lg-6 col-md-6 field-cover">
-                    <div class="content">
+                    <div class="content cover">
                         <h1 style="font-family: 'AR Bonnie'; color: #9d9d9d; font-weight: bold;">P r o d u c t　P o r t f o l i o</h1>
-                        <h2 style="font-family: 'Eras Bold ITC'; color: rgb(50, 130, 190); font-size: x-large;">inspiring lifestyle<div style="font-family: 'Arial'; font-weight: bold; color: white; font-size: x-large;">2017</div></h2>
+                        <div style="display: flex; min-width: 89%;">
+                            <div style="font-family: 'Eras Bold ITC'; color: rgb(50, 130, 190); font-size: x-large; flex-grow: 1;">inspiring lifestyle</div>
+                            <div style="font-family: 'Arial'; font-weight: bold; color: white; font-size: x-large;">2017</div>
+                        </div>
+
+                        <img style="min-width: 5vw; width: 50%;" src="images/csc/(logo)amod-zhi.svg">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 hidden-xs hidden-sm">
@@ -342,7 +357,7 @@
                     <div class="content">
                         <h1>WallE<small>SD.2301SS</small></h1>
                         <hr>
-                        <p style="font-weight: 300; font-size: 13pt;">相對於其他的拉門設計，此款單輪軸、單桿設計的淋浴拉門將是最易於施工，並且價格最為合宜的品項。</p>
+                        <p>相對於其他的拉門設計，此款單輪軸、單桿設計的淋浴拉門將是最易於施工，並且價格最為合宜的品項。</p>
                         <p>建議在寸土寸金大都會區的小坪數套房設計規劃上使用，將會是設計感與預算最為平衡的選擇。</p>
                     </div>
                 </div>
