@@ -51,26 +51,6 @@
     <script type="text/javascript" src="pace/pace.min.js"></script>
 
     <style>
-        @font-face {
-            font-family: "Euphemia";
-            src: url("font/Euphemia UCAS Bold 2.6.6.ttf") format("opentype"),
-                url("font/Euphemia UCAS Italic 2.6.6.ttf") format("opentype"),
-                url("font/Euphemia UCAS Regular 2.6.6.ttf") format("opentype");
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "Eras Bold ITC";
-            src: url("font/eras-bold-itc.TTF") format("opentype");
-            font-weight: normal;
-            font-style: normal;
-        }
-        @font-face {
-            font-family: "AR Bonnie";
-            src: url("font/ARBONNIE.ttf") format("opentype");
-            font-weight: normal;
-            font-style: normal;
-        }
         /* ========================= */
         @media screen and (min-width: 1750px) {
             .container {
@@ -84,8 +64,11 @@
         section .bg-white {
             background-color: white;
         }
+        .row {
+            min-height: 100vh;
+        }
         .row div img {
-            min-width: 50%; max-width: 100%; height: auto; left: 0; bottom: 0;
+            min-width: 30%; max-width: 100%; height: auto; left: 0; bottom: 0;
         }
         .row > .col-lg-6 {
             padding: 0;
@@ -95,6 +78,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        .field-cover {
+            align-items: flex-end;
+            min-height: 90vh;
         }
         hr {
             background-color: dimgrey;
@@ -106,6 +93,12 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            align-content: space-between;
+            height: 70vh;
+            padding-bottom: 12vh;
+        }
+        .cover > img {
+            padding: 0;
         }
         .content {
             color: black;
@@ -139,6 +132,16 @@
         .tab-content {
             min-height: 30vh;
         }
+        .loader-logo {
+            width: 22%;
+        }
+        .cover-font {
+            min-height: 8vh;
+        }
+        #section-contact div.row {
+            min-height: initial;
+            padding: initial;
+        }
 
         @media screen and (max-width: 768px) {
             .field {
@@ -168,6 +171,23 @@
             .tab-content {
                 min-height: 80vh;
             }
+            .loader-logo {
+                width: 50%;
+            }
+            .cover {
+                height: 65vh;
+            }
+            .cover-font {
+                width: 75vw;
+            }
+            .cover-logo {
+                width: 10vw;
+            }
+            .mobile {
+                display: flex;
+                align-items: stretch;
+                justify-content: center;
+            }
         }
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             .field {
@@ -176,10 +196,19 @@
             .content > img {
                 padding-top: 0;
             }
+            .row {
+                min-height: 100vh;
+            }
+            .cover-logo {
+                width: 5vw;
+            }
         }
         @media screen and (min-width: 1024px) and (max-width: 1366px) {
-            .field, .field-cover {
+            .field {
                 min-height: 35vh;
+            }
+            .field-cover {
+                min-height: initial;
             }
             .content > h1 {
                 font-size: 30pt;
@@ -196,10 +225,34 @@
             #all > section {
                 height: auto;
             }
+            .row {
+                min-height: initial;
+                display: flex;
+                align-items: stretch;
+            }
+            .row div img {
+                min-width: 10%;
+            }
+            .cover {
+                min-height: 26vh;
+                height: 70%;
+                padding-bottom: 5vh;
+            }
+            .cover-font {
+                width: 40vw;
+            }
+            .cover-logo {
+                width: 30%;
+            }
         }
         @media screen and (min-width: 1200px) and (max-width: 3000px) {
             .container {
                 width: 100%;
+            }
+            .row {
+                min-height: initial;
+                display: flex;
+                align-items: stretch;
             }
         }
     </style>
@@ -254,7 +307,7 @@
     </div>
     <div class="loader-container">
         <div class="loader-content">
-            <img class="loader-logo" alt="Smarty" src="images/logo2.png">
+            <img class="loader-logo" alt="Smarty" src="images/csc/(logo)amod-zhi.svg">
         </div>
     </div><!-- .loader-container -->
     <div class="loader-footer">
@@ -270,7 +323,7 @@
         <div class="menu-container">
             <div class="menu-inner">
                 <div class="logo-container">
-                    <img alt="Smarty" src="images/logo.png">
+                    <img alt="Smarty" src="images/csc/(logo)amod-zhi.svg">
                 </div>
                 <nav class="main-navigation">
                     <ul id="one-page-nav">
@@ -309,16 +362,12 @@
 
     <section id="sectionCover">
         <div class="container bg-white">
-            <div class="row" style="background-color: #1b1b1b;">
+            <div class="row mobile" style="background-color: #1b1b1b;">
                 <div class="col-lg-6 col-md-6 field-cover">
-                    <div class="content cover">
-                        <h1 style="font-family: 'AR Bonnie'; color: #9d9d9d; font-weight: bold;">P r o d u c t　P o r t f o l i o</h1>
-                        <div style="display: flex; min-width: 89%;">
-                            <div style="font-family: 'Eras Bold ITC'; color: rgb(50, 130, 190); font-size: x-large; flex-grow: 1;">inspiring lifestyle</div>
-                            <div style="font-family: 'Arial'; font-weight: bold; color: white; font-size: x-large;">2017</div>
-                        </div>
+                    <div class="cover">
+                        <img class="cover-font" src="images/csc/封面文字.svg">
 
-                        <img style="min-width: 5vw; width: 50%;" src="images/csc/(logo)amod-zhi.svg">
+                        <img class="cover-logo" src="images/csc/(logo)amod-zhi.svg">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 hidden-xs hidden-sm">
