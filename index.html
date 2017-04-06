@@ -52,6 +52,11 @@
 
     <style>
         /* ========================= */
+        @font-face {
+            font-family: "Bell MT Bold";
+            src: url('font/bell-mt-bold.ttf');
+        }
+
         @media screen and (min-width: 1750px) {
             .container {
                 width: initial;
@@ -143,7 +148,23 @@
         .cover-font {
             min-height: 8vh;
         }
-
+        /* ----------版四---------- */
+        .blade4 {
+            z-index: 1;position: absolute; top: 0; height: 100%;
+        }
+        .blade4 > div {
+            margin: 0 auto; position:absolute; left: 22%; top: 37%; width: 50%; height: 50%;
+        }
+        .blade4 > div h1 {
+            margin: 0; padding-bottom: 20px; font-family: Microsoft JhengHei; font-size: 36pt;
+        }
+        .blade4 > div h2 {
+            margin: 0; font-family: Bell MT Bold; font-weight: bold; font-size: 24pt;
+        }
+        .blade4 > div ul {
+            font-family: Arial, Microsoft JhengHei; font-size: 18pt; font-weight:bold; font-weight: 300; line-height: 30pt;
+        }
+        /* ------------------------ */
 
         @media screen and (max-width: 768px) {
             .field {
@@ -201,6 +222,22 @@
                 width: initial !important;
                 height: 100vh !important;
             }
+            .blade4 > div {
+                top: 30%;
+                width: 90vw;
+                left: 100%;
+            }
+            .blade4 > div h1 {
+                font-size: 26pt;
+            }
+            .blade4 > div h2 {
+                font-size: 16pt;
+            }
+            .blade4 > div ul {
+                font-size: 14pt;
+                line-height: 24pt;
+            }
+
         }
         @media screen and (min-width: 768px) and (max-width: 1024px) {
             .field {
@@ -421,10 +458,29 @@
     <section id="sectionB">
         <div class="container bg-white">
             <div class="row" style="background-color: #1b1b1b;">
-                <div class="col-lg-12 col-md-12" style="padding: 0;">
-                    <div class="mobile2">
+                <div class="col-lg-12 col-md-12" style="padding: 0; position: relative;">
+                    <div class="mobile2" >
                         <img src="images/csc/P03-版型2-圖1.jpg">
                     </div>
+                    <div class="col-lg-6 blade4">
+                        <div>
+                            <h2>Shower Room Hardware</h2>
+                            <h1>淋浴間五金</h1>
+                            <ul>
+                                <li>工藝與質量‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧ 4</li>
+                                <li>淋浴間門五金</li>
+                                <li style="list-style-type: none;">Glatt 玻璃鉸鏈‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧ 5</li>
+                                <li style="list-style-type: none;">Penna 玻璃鉸鏈‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧ 8</li>
+                                <li style="list-style-type: none;">Volkslime 玻璃鉸鏈‧‧‧‧‧‧‧‧‧‧‧ 12</li>
+                                <li style="list-style-type: none;">Midway 玻璃鉸鏈‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧ 14</li>
+                                <li style="list-style-type: none;">Roundie 玻璃鉸鏈‧‧‧‧‧‧‧‧‧‧‧‧‧‧ 15</li>
+                                <li style="list-style-type: none;">WallE 玻璃移門‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧ 16</li>
+                                <li style="list-style-type: none;">PatinaII 玻璃移門‧‧‧‧‧‧‧‧‧‧‧‧‧‧‧ 20</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
